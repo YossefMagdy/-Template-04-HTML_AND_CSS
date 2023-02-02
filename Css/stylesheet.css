@@ -105,7 +105,7 @@ header .container .nav-content .toggle-menu {
     width: 30px;
     flex-wrap: wrap;
     position: absolute;
-    right: 10%;
+    right: 20%;
     display: none;
 }
 header .container .nav-content .toggle-menu span{
@@ -154,7 +154,7 @@ header .container .nav-content ul li a:hover{
     }
     header .container .nav-content .toggle-menu:hover ~ul {
         display: flex;
-        width: 100vw;
+        width: 100%;
         max-width: 100%;
         position: absolute;
         flex-direction: column;
@@ -162,9 +162,10 @@ header .container .nav-content ul li a:hover{
         top: 120%;
         right: 20%;
         left: 0;
+        text-align: center;
     }
     header .container .nav-content .toggle-menu:hover ~ul li {
-        padding: 10px 20px;
+        padding: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
     header .container .nav-content .toggle-menu:hover ~ul li:last-of-type {
@@ -198,9 +199,10 @@ header .container .nav-content ul li a:hover{
             top: 120%;
             right: 0%;
             left: 0;
+            text-align: center;
         }
         header .container .nav-content .toggle-menu:hover ~ul li {
-            padding: 10px 20px;
+            padding: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
         header .container .nav-content .toggle-menu:hover ~ul li:last-of-type {
@@ -216,7 +218,11 @@ header .container .nav-content ul li a:hover{
         }
         header .container .nav-content .toggle-menu:hover .s1{
             transform: rotate(45deg);
-        }
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+}
         header .container .nav-content .toggle-menu:hover .s2{
             transform: rotate(-45deg);
             position: relative;
@@ -234,9 +240,10 @@ header .container .nav-content ul li a:hover{
             top: 120%;
             right: 0%;
             left: 0;
+            text-align: center;
         }
         header .container .nav-content .toggle-menu:hover ~ul li {
-            padding: 10px 20px;
+            padding: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
         header .container .nav-content .toggle-menu:hover ~ul li:last-of-type {
@@ -252,10 +259,11 @@ header .container .nav-content ul li a:hover{
     height: 100vh;
     justify-content: center;
     align-items: center ;
-    background-image:url(../image/intro-bg.jpg) ;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.226)),url(../image/intro-bg.jpg) ;
     background-size: cover;
     background-position: center center;
     position: relative;
+    width: 100%;
 }
 .home::before{
     content: "";
@@ -267,9 +275,10 @@ header .container .nav-content ul li a:hover{
     z-index: 1;
 }
 .home .container{
-    position: relative;
+    position: absolute;
     z-index: 2;
     text-align: center;
+    width: 100%;
 }
 .home .container .home-content p{
     color: #dee3e4;
@@ -284,17 +293,11 @@ header .container .nav-content ul li a:hover{
     display: flex;
     margin-left: 70px;
 }
-.home .container .home-content .wrapper .static-txt {
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-    overflow: hidden;
-    text-align: center;
-}
 .home .container .home-content .wrapper  .dynamic-txt {
     overflow: hidden;
     height: 60px;
     line-height: 80px;
+    margin: auto;
 }
 .home .container .home-content .wrapper  ul {
     list-style: none;
@@ -328,20 +331,6 @@ header .container .nav-content ul li a:hover{
 .home .container .home-content .wrapper  ul li span{
     position: relative;
 }
-/* .home .container .home-content .wrapper  ul li span::after{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid white;
-    left: 0;
-    animation: typing  1.5s steps(16) infinite alternate;
-}
-@keyframes typing{
-    100%{
-        left: 100%;
-    }
-} */
 
 .home .container .home-content button{
     width: 170px;
@@ -670,6 +659,9 @@ header .container .nav-content ul li a:hover{
     }
 }
 @media screen and (max-width:499px) {
+    .about{
+        padding: 20px;
+}
     .about  .about-content{
         flex-wrap: wrap;
         justify-content: space-around;
@@ -728,6 +720,9 @@ header .container .nav-content ul li a:hover{
     }
 }
 @media screen and (max-width:499px) {
+    .service{
+        padding: 20px !important;
+    }
     .service .container .service-content .box{
         width: 100%;
     }
@@ -994,6 +989,9 @@ header .container .nav-content ul li a:hover{
     }
  }
  @media screen and (max-width:499px) {
+    .portifolio{
+        padding: 20px;
+    }
     .portifolio .container .portifolio-content .containerx{
         width: 100%;
     }
@@ -1098,6 +1096,9 @@ header .container .nav-content ul li a:hover{
     }
  }
  @media screen and (max-width:499px) {
+    .client{
+        padding: 20px;
+    }
     .client .container .client-content{
         flex-wrap: wrap;
     }
@@ -1219,6 +1220,7 @@ header .container .nav-content ul li a:hover{
 @media screen and (max-width:767px) and (min-width:500px){
     .contact .container .contact-info{
         width: 100%;
+        /* text-align: center; */
         }
     .contact .container .contact-send{
         width: 100%;
@@ -1232,6 +1234,9 @@ header .container .nav-content ul li a:hover{
     }
 }
 @media screen and (max-width:499px) {
+    .contact{
+        padding: 20px;
+    }
     .contact .container .contact-info{
         width: 100%;
         text-align: center;
@@ -1311,6 +1316,9 @@ header .container .nav-content ul li a:hover{
     }
 }
 @media screen and (max-width:499px) {
+    .footer{
+        padding: 20px;
+    }
     .footer .container .copyright{
         width: 100%;
         text-align: center;
